@@ -6,6 +6,9 @@
   <link rel="stylesheet" href="home.css">
 </head>
 <body>
+    <audio id="bg-music" loop>
+  <source src="audio.ogg" type="audio/mpeg">
+</audio>
 
   <div class="wrapper">
 
@@ -34,6 +37,24 @@
     </div>
 
   </div>
+  <script>
+  const music = document.getElementById("bg-music");
+
+  // Check if music was already playing
+  if (localStorage.getItem("musicPlaying") === "true") {
+    music.play().catch(() => {});
+  }
+
+  // Start music on first user interaction
+  document.addEventListener("click", () => {
+    if (music.paused) {
+      music.play().then(() => {
+        localStorage.setItem("musicPlaying", "true");
+      }).catch(() => {});
+    }
+  }, { once: true });
+</script>
+
 
 </body>
 </html>
