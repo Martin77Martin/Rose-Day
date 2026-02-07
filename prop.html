@@ -11,6 +11,9 @@
   <link rel="stylesheet" href="prop.css">
 </head>
 <body>
+    <audio id="bg-music" loop>
+  <source src="audio.ogg" type="audio/mpeg">
+</audio>
 
   <!-- BACKGROUND HEARTS -->
   <div class="hearts"></div>
@@ -98,6 +101,22 @@
     document.getElementById("response-text").innerHTML =
       "Arre nahi 😌<br>manu please ha bol do na please mere se shaadi kr lo na mai jindagi bhar aapka gulam bann ke rahunga please meri sona mai aapse bheekh mangta hu please mere se shaadi kr lo mai aapke pairo me girke request krta hu please mere se shaadi kr lo na please, mai nhi ji sakta aapke bina please yes wala button daba do please manu mere liye mere se shaadi krlo please bs mere liye 💗";
   }
+
+  const music = document.getElementById("bg-music");
+
+  // Check if music was already playing
+  if (localStorage.getItem("musicPlaying") === "true") {
+    music.play().catch(() => {});
+  }
+
+  // Start music on first user interaction
+  document.addEventListener("click", () => {
+    if (music.paused) {
+      music.play().then(() => {
+        localStorage.setItem("musicPlaying", "true");
+      }).catch(() => {});
+    }
+  }, { once: true });
 </script>
 
 </body>
