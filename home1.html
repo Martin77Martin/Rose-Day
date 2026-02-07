@@ -6,6 +6,9 @@
   <link rel="stylesheet" href="home1.css">
 </head>
 <body>
+    <audio id="bg-music" loop>
+  <source src="audio.ogg" type="audio/mpeg">
+</audio>
 
   <!-- PAGE 1 -->
   <section class="page" id="page1">
@@ -68,6 +71,23 @@
       <a href="index.html" class="btn back">⬅ Back</a>
     </div>
   </section>
+  <script>
+  const music = document.getElementById("bg-music");
+
+  // Check if music was already playing
+  if (localStorage.getItem("musicPlaying") === "true") {
+    music.play().catch(() => {});
+  }
+
+  // Start music on first user interaction
+  document.addEventListener("click", () => {
+    if (music.paused) {
+      music.play().then(() => {
+        localStorage.setItem("musicPlaying", "true");
+      }).catch(() => {});
+    }
+  }, { once: true });
+</script>
 
 </body>
 </html>
