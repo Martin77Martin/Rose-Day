@@ -186,3 +186,28 @@ footer {
   animation: fadeUp 0.8s ease;
 }
 
+
+/* NEXT PAGE BUTTON */
+.next-page {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.next-btn {
+  text-decoration: none;
+  padding: 16px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  border-radius: 35px;
+  background: linear-gradient(135deg, #ff5fa2, #ff2f7d);
+  box-shadow: 0 15px 35px rgba(255, 60, 130, 0.5);
+  transition: all 0.35s ease;
+}
+
+.next-btn:hover {
+  transform: scale(1.12);
+  box-shadow: 0 20px 45px rgba(255, 40, 120, 0.7);
+}
+
