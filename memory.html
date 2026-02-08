@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Beautiful Memories 💗</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="memory.css">
+</head>
+<body>
+    <audio id="bg-music" loop>
+  <source src="audio.ogg" type="audio/mpeg">
+</audio>
+
+  <!-- Floating Hearts -->
+  <div class="heart-bg"></div>
+
+  <main class="memory-wrapper">
+
+    <!-- Header -->
+    <section class="header">
+      <h1>Our Beautiful Memories 💞</h1>
+      <p>Har tasveer me tum, har pal me pyaar ✨</p>
+    </section>
+
+    <!-- Gallery -->
+    <section class="memory-gallery">
+      <!-- ADD / CHANGE IMAGES MANUALLY -->
+      <img src="meet.jpeg" alt="Memory 1">
+      <img src="date1.jpeg" alt="Memory 2">
+      <img src="date2.jpeg" alt="Memory 3">
+      <img src="date3.jpeg" alt="Memory 4">
+      <img src="date4.jpeg" alt="Memory 5">
+      <img src="date5.jpeg" alt="Memory 6">
+      <img src="date6.jpeg" alt="Memory 7">
+      <img src="date7.jpeg" alt="Memory 8">
+      <img src="date8.jpeg" alt="Memory 9">
+      <img src="date9.jpeg" alt="Memory 10">
+      <img src="date10.jpeg" alt="Memory 11">
+      <img src="halwai.jpeg" alt="Memory 12">
+      <img src="date12.jpeg" alt="Memory 13">
+      <img src="date11.jpeg" alt="Memory 14">
+    </section>
+
+    <!-- Text -->
+    <section class="memory-text">
+      <p>
+        Ye sirf photos nahi hain meri jaan…  
+        ye wo pal hain jahan meri duniya ruk jaati hai 💗  
+        ye meri life ke best moments hai meri pyaari Sona.
+        Hamara relation aise hi hamesha bana rahega isse bhi aur gehra ho jaayega,
+        hm dono ka ek dusre se shaadi ho jaayega phir ham dono hamesha saath rahenge meri Sona.
+      </p>
+
+      <p class="love-line">
+        HAPPY ANNIVERSARY MERI JAAN 💕
+      </p>
+
+      <span class="sign">— Tumhara Abhi ❤️</span>
+    </section>
+
+    <!-- Next Button -->
+    <div class="next-section">
+      <a href="next.html" class="next-btn">Next 💖</a>
+    </div>
+
+  </main>
+
+  <script>
+  const music = document.getElementById("bg-music");
+
+  // Check if music was already playing
+  if (localStorage.getItem("musicPlaying") === "true") {
+    music.play().catch(() => {});
+  }
+
+  // Start music on first user interaction
+  document.addEventListener("click", () => {
+    if (music.paused) {
+      music.play().then(() => {
+        localStorage.setItem("musicPlaying", "true");
+      }).catch(() => {});
+    }
+  }, { once: true });
+</script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Background */
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #ffd6eb, #ff9fcd, #ff6fae);
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+/* Floating Hearts */
+.heart-bg::before {
+  content: "💗 💕 💖 💞 💘";
+  position: fixed;
+  left: 50%;
+  top: 110%;
+  transform: translateX(-50%);
+  font-size: 26px;
+  opacity: 0.14;
+  animation: floatHearts 18s linear infinite;
+}
+
+@keyframes floatHearts {
+  from { top: 110%; }
+  to { top: -15%; }
+}
+
+/* Wrapper */
+.memory-wrapper {
+  width: 94%;
+  max-width: 400px;
+  background: rgba(255,255,255,0.88);
+  border-radius: 32px;
+  padding: 26px 20px;
+  box-shadow: 0 30px 70px rgba(255, 80, 150, 0.45);
+  animation: fadeUp 1.2s ease;
+}
+
+/* Header */
+.header h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 34px;
+  color: #b01257;
+  text-align: center;
+}
+
+.header p {
+  margin-top: 6px;
+  text-align: center;
+  font-size: 14px;
+  font-style: italic;
+  color: #7a1e4f;
+}
+
+/* Gallery */
+.memory-gallery {
+  margin: 26px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.memory-gallery img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 14px 32px rgba(255, 90, 140, 0.45);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.memory-gallery img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 20px 45px rgba(255, 60, 130, 0.6);
+}
+
+/* Text */
+.memory-text {
+  background: rgba(255,255,255,0.95);
+  padding: 18px;
+  border-radius: 24px;
+  box-shadow: inset 0 0 18px rgba(255, 120, 170, 0.15);
+}
+
+.memory-text p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: #5c1840;
+  margin-bottom: 12px;
+}
+
+.love-line {
+  font-weight: 600;
+  color: #b01257;
+}
+
+.sign {
+  display: block;
+  margin-top: 8px;
+  font-weight: 600;
+  color: #a41555;
+  text-align: right;
+}
+
+/* Next Button */
+.next-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+.next-btn {
+  text-decoration: none;
+  padding: 16px 44px;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  border-radius: 40px;
+  background: linear-gradient(135deg, #ff66ad, #ff2f7d);
+  box-shadow: 0 18px 40px rgba(255, 70, 140, 0.6);
+  transition: all 0.35s ease;
+}
+
+.next-btn:hover {
+  transform: scale(1.15);
+  box-shadow: 0 25px 55px rgba(255, 40, 120, 0.8);
+}
+
+/* Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(45px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

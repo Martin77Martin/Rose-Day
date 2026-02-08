@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Only Us 💗</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="anni.css">
+</head>
+<body>
+    <audio id="bg-music" loop>
+  <source src="audio.ogg" type="audio/mpeg">
+</audio>
+
+  <!-- Moving Hearts Background -->
+  <div class="heart-bg"></div>
+
+  <main class="love-wrapper">
+
+    <!-- Title -->
+    <section class="top">
+      <h1>Happy Anniversary Mera Baccha 💞</h1>
+      <p>My Baby, Meri duniya, Meri sona, Meri Jaanu 💖</p>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section class="gallery">
+      <img src="diwali_best.jpeg" alt="Love 1">
+      <img src="diwali_car.jpeg" alt="Love 2">
+    </section>
+
+    <!-- Love Message -->
+    <section class="love-text">
+      <p>
+        Manu aaj se theek 6 saal pahle maine tumko dekha tha wo din aaj bhi mereko yaad hai tum ekdam hoor ki pari lag rhi thi,
+        mereko pta nhi tumhe dekhte hi kya ho gya tha, mai ekdam kho sa gya tha, aaj tk na pahle aisa kabhi hua tha aur na hi future me kabhi hoga.
+        Mujhe to tumhe dekhte hi tumse pyaar ho gya tha, ha maanta hu jo aaj hai waisa pyaar nhi tha lekin pyaar to tha, tumhaari sundarta se hi tha 
+        lekin pyaar to tha, aur dheere dheere mera wo pyaar tumhaare liye badhta gaya, itni dooriyo ke baavjood, itni galatfehmiyo ke baavjood, 
+        logo ko tumko merese itne door krne ki kosis krne ke baavjood bhi mera pyaar tumhaare liye kabhi kam nhi hua, dheere dheere badhta hi gaya,
+        aur aaj ye haal hai ki tumhaari har chiz se pyaar hai mujhe, tumhaari hasi se tumhaari naadaniyo se tumhaari badmaashiyo se tumhaare pyaarse tumhaare gusse se
+        tumhaari baato se tumhaari laato se tumhaari gusse se tumhaari jhulfo se tumhaare badan ke ek ek hisse se tumhaari aatma se tumhaare dance se tumhaare romance se 
+        tumhaari dhamkiyo se tumhaari mastiyo se tumhaari life ki ek ek chiz se.. 💗💖
+        kaise batau tumhe ki mai kitna lucky hu ki mujhe aaj kl ke Rakchaso aur Chudailo ki duniya me ek devi mili hai, mai tumhe bohot pyaar karta hu sona, kasam se.
+        Itna pyaar karta hu na ki mai kabhi kisi ke liye v tumhe nhi chor sakta, kisi ke liye kya mai tumhe tumhaare liye v nhi chor sakta, actually mai tumhe kabhi chor hi nhi sakta sona 💖💖.
+        mai bahut khush hu ki tum mere saath ho aur mai tumhe hamesha apne saath hi rakhunga sona, mai bola tha na ki tum mere DNA me ghus gai ho to ab tum zindagi bhar aur zindai ke baad v mere saath hi rahogi..
+        
+        <!-- Photo Gallery -->
+    <section class="gallery">
+      <img src="diwali_diya.jpeg" alt="Love 1">
+      <img src="suit1.jpeg" alt="Love 2">
+      
+    </section>
+
+        <br></br>
+        <b>Happy 6th Anniversery My Baby 💗💗</b>
+        <br></br>
+        <b>And Happy Chocolate Day My Sona 💖</b>
+
+        Kaash hmlog aaj saath hote, kitna maja aata na manu, mai ttumhaare saath rehna chata hu sona tumhaare saath jeena chahta hu,
+        tumhaare saath time spend krna chahta hu lekin ye jaalim duniya inki najar ka kya karu mai tumse thoda sa milne v aata hu to lagta hai ki 
+        pata nhi konsa crime kr rha hu, in chutiye logo ka to kuch nhi kar sakte lekin mai tumhe ek din jaroor in chutiye samaj se bahut door le ke 
+        jaaunga jaha aisa kuch problem nhi hoga, jaha koi rok tok nhi hogi, jaha sirf mai tum aur bsssssss.
+
+          
+      </p>
+
+      <p>
+        Main shabd nahi dhoond paata jitna pyaar  
+        main tumse karta hoon…  
+        bas itna jaan lo —  
+        **tum hi mera sab kuch ho** 💞
+      </p>
+    </section>
+
+    
+
+    <!-- More Message -->
+    <section class="love-text">
+      <p>
+        Tumhaare saath har din  
+        kisi festival se kam nahi lagta 💕  
+        Main wada karta hoon —  
+        Hamesha tumhara saath dunga,
+        Tumne mujhe chuna iska kabhi regret nhi hone dunga,
+        aur tumhaari muskaan hamesha sambhaal ke rakhunga.
+      </p>
+
+      <p class="promise">
+        I don’t promise perfection,  
+        I promise **loyalty, respect & endless love** 💍
+      </p>
+
+      <span class="sign">— Tumhara Abhi ❤️</span>
+    </section>
+
+    <!-- NEXT PAGE BUTTON -->
+<div class="next-section">
+  <a href="memory.html" class="next-btn">Next 💕</a>
+</div>
+
+
+  </main>
+  <script>
+  const music = document.getElementById("bg-music");
+
+  // Check if music was already playing
+  if (localStorage.getItem("musicPlaying") === "true") {
+    music.play().catch(() => {});
+  }
+
+  // Start music on first user interaction
+  document.addEventListener("click", () => {
+    if (music.paused) {
+      music.play().then(() => {
+        localStorage.setItem("musicPlaying", "true");
+      }).catch(() => {});
+    }
+  }, { once: true });
+</script>
+
+</body>
+</html>
