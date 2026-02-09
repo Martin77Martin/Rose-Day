@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Teddy Day 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="test.css">
+</head>
+
+<body>
+    <audio id="bg-music" loop>
+  <source src="audio.ogg" type="audio/mpeg">
+</audio>
+
+<!-- PAGE 1 -->
+<section class="page" id="page1">
+  <h1>Happy Teddy Day Meri Manu 🧸💗</h1>
+
+  <div class="photo-frame">
+    <img src="teddy_day.jpeg" alt="My Teddy">
+  </div>
+
+  <div class="message glass">
+    <p>
+      Tum meri zindagi ka sabse pyaara teddy ho 🧸  
+      Tumhaari ek smile meri saari thakaan mita deti hai 💖
+    </p>
+
+    <p>
+      Jab bhi duniya thaka lagti hai,  
+      tum meri comfort ban jaati ho 💕
+    </p>
+
+    <p class="highlight">
+      You are my Wife my Manisha 💕❤️🤍
+    </p>
+
+    <span>— Tumhara Abhi ❤️</span>
+  </div>
+
+  <div class="nav">
+    <a href="#page2" class="btn next">Next ➜</a>
+  </div>
+</section>
+
+<!-- PAGE 2 -->
+<section class="page" id="page2">
+  <h1>My Forever Teddy 💝</h1>
+
+  <div class="photo-frame small">
+    <img src="withteddy.png" alt="Cute Memory">
+  </div>
+
+  <div class="message glass">
+    <p>
+      Meri sona…  
+      tum wo teddy ho jo bina bole  
+      sab samajh jaati ho 
+      aur sab theek bhi kr deti ho meri pyaari sona🧸💞
+    </p>
+
+    <p class="highlight">
+      Forever & Always ❤️
+    </p>
+  </div>
+
+  <div class="nav">
+    <a href="next.html" class="btn next">Next ➜</a>
+    <a href="#page1" class="btn back">⬅ Back</a>
+  </div>
+</section>
+<script>
+  const music = document.getElementById("bg-music");
+
+  // Check if music was already playing
+  if (localStorage.getItem("musicPlaying") === "true") {
+    music.play().catch(() => {});
+  }
+
+  // Start music on first user interaction
+  document.addEventListener("click", () => {
+    if (music.paused) {
+      music.play().then(() => {
+        localStorage.setItem("musicPlaying", "true");
+      }).catch(() => {});
+    }
+  }, { once: true });
+</script>
+
+</body>
+</html>
